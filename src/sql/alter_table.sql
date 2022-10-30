@@ -1,0 +1,1 @@
+ALTER TABLE data_table ADD (cep VARCHAR(255), endereco VARCHAR(255), bairro VARCHAR(255), cidade VARCHAR(255));

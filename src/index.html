@@ -11,7 +11,7 @@
 <body>
     <header>
         <nav class="menu">
-            <h1>CHEFE DA PIPOCA</h1>
+            <h1><a href="#">CHEFE DA PIPOCA</a></h1>
             <label for="check">
                 <i class="fa-solid fa-bars btn"></i>
             </label>
@@ -25,20 +25,49 @@
         </nav>
     </header>
     <main>
-      <section>
-        <h1>QUEM SOMOS?</h1>
-        <p>Somos um microempreendedor. Trabalhamos fornecendo pipocas de doce, pipocas de sal e algodão doce, em Uberlândia - MG. Fornecemos os produtos para realização de festas e eventos. Caso esteja realizando uma festa ou evento, faça seu orçamento</p>
-        <a href="#orcamento" class="btn">ORÇAMENTO</a>
+      <section class="section item-1">
+        <h1>SOBRE</h1>  
+        <div class="container" id="about">
+          <p>O Chefe da pipoca é um microempreendedor, fornecendo pipoca e algodão doce na cidade de Uberlândia - MG e região. Realizamos fornecimento de pipocas de doce, pipocas de sal e algodão doce, em eventos, festas e outras atividades que contatados.</p>
+        </div>
       </section>
-      <section>
+      <section class="section">
         <h1>ORÇAMENTO</h1>
-        <form>
-          <input type="text" placeholder="Nome completo"/>
-          <input type="email" placeholder="E-mail"/>
-          <input type="number" placeholder="Contato (34) 999991200"/>
-        </form>
+        <div class="container form-wrap">
+          <form action="../src/php/connect.php" method="post">
+            <input type="text" name="name" placeholder="Nome completo"/>
+            <input type="email" name="email" placeholder="E-mail"/>
+            <input type="number" name="number" placeholder="Contato (34) 999991200"/>
+            <input type="number" name="cep" placeholder="CEP"/>
+            <input type="text" name="street" id="street" placeholder="Rua/Av">
+            <input type="text" name="neighborhood" id="neighborhood" placeholder="Bairro">
+            <input type="text" name="city" id="city" placeholder="Cidade">
+            <input type="number" name="numberHouse" id="numberHouse" placeholder="Número">
+            <button type="submit" class="btn">Enviar</button>
+          </form>
+        </div>
       </section>
-    </main>
+      
+      <form action="../src/php/export.php" method="post">
+        <button type="submit">Exportar</button>
+      </form>
+
+      <section class="section">
+        <h1>CONTATO</h1>
+        <div class="container social-medias">
+          <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://www.instagram.com/chefe.da.pipoca/" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+        </di>
+      </section>
+  </main>
+    
+  <footer>
+    <div class="container">
+      <p>Todos os direitos reservados para &copy; Chefe da Pipoca - 2022</p>
+    </div>  
+  </footer>
+  
     <script src="js/script.js"></script>
 </body>
 </html>
